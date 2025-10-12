@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="epugaS1.Views.FrmAdminiciones"
+             Title="FrmAdminiciones"
+             BackgroundColor="#F5F5F5">
+    
+    <VerticalStackLayout Margin="30,30,20,20"
+                         Padding="30,30,20,20">
+
+        <StackLayout Spacing="10" >
+
+            <Label
+                Text="FASE A - GRADO"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                FontSize="22"
+                FontAttributes="Bold"
+                TextColor="#083765"
+                Margin="20"
+            />
+
+            <Label
+                Text="Formulario de registro"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                TextColor="#333333"
+                FontSize="14"
+            />
+
+            <Label
+                Text="Complete la siguiente información para realizar su inscripción"
+                TextColor="#333333"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                FontSize="14"
+                />
+
+        </StackLayout>
+
+        <StackLayout Spacing="20" Padding="20">
+
+            <Label
+                Text="Datos Personales"
+                TextColor="#959595"
+                FontSize="16"
+                FontAttributes="Bold"
+                />
+            
+            <Entry
+                x:Name="txtTipoIdentificacion"
+                Placeholder="seleccione"
+                BackgroundColor="White"
+                />
+            
+            <Entry
+                x:Name="txtApellidos"
+                Placeholder="Apellidos"
+                BackgroundColor="White"
+                />
+
+            <Entry
+                x:Name="txtNombres"
+                Placeholder="Nombres completos"
+                BackgroundColor="White"
+                />
+
+            <Entry
+                x:Name="txtTelefono"
+                Placeholder="Teléfono personal"
+                BackgroundColor="White"
+                />
+
+            <Entry
+                x:Name="txtCorreo"
+                Placeholder="Correo personal"
+                BackgroundColor="White"
+                />
+
+            <Entry
+                x:Name="txtCorreoConfirmacion"
+                Placeholder="Confirmar correo"
+                BackgroundColor="White"
+                />
+
+            <Label Text="Carrera:" TextColor="#333333" FontSize="14" />
+            <Picker
+                x:Name="pckCarrera"
+                Title="Seleccione"
+                BackgroundColor="White"
+                TextColor="#333333"
+                TitleColor="#888888"
+                HeightRequest="45"
+                >
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Ingeniería de software</x:String>
+                        <x:String>Administración</x:String>
+                        <x:String>Contabilidad</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+                
+                
+                
+            </Picker>
+
+            <Entry
+                x:Name="txtCarrera"
+                Placeholder="seleccione"
+                BackgroundColor="White"
+                />
+
+            <Entry
+                x:Name="txtModalidad"
+                Placeholder="seleccione"
+                BackgroundColor="White"
+                />
+
+            <Entry
+                x:Name="txtCampus"
+                Placeholder="Confirmar correo"
+                BackgroundColor="White"
+                />
+
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>
