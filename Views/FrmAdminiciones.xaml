@@ -1,127 +1,159 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="epugaS1.Views.FrmAdminiciones"
-             Title="FrmAdminiciones"
-             BackgroundColor="#F5F5F5">
-    
-    <VerticalStackLayout Margin="30,30,20,20"
-                         Padding="30,30,20,20">
+<ContentPage
+    x:Class="epugaS1.Views.FrmAdminiciones"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="FrmAdminiciones"
+    BackgroundColor="#f5f5f5">
 
-        <StackLayout Spacing="10" >
+    <ScrollView>
+
+        <VerticalStackLayout Margin="30,30,20,20" Padding="30,30,20,20">
+
+            <StackLayout Spacing="10">
+
+                <Label
+                    Margin="20"
+                    FontAttributes="Bold"
+                    FontSize="22"
+                    HorizontalOptions="Center"
+                    Text="FASE A - GRADO"
+                    TextColor="#083765"
+                    VerticalOptions="Center" />
+
+                <Label
+                    FontSize="14"
+                    HorizontalOptions="Center"
+                    Text="Formulario de registro"
+                    TextColor="#333333"
+                    VerticalOptions="Center" />
+
+                <Label
+                    FontSize="14"
+                    HorizontalOptions="Center"
+                    Text="Complete la siguiente información para realizar su inscripción"
+                    TextColor="#333333"
+                    VerticalOptions="Center" />
+
+            </StackLayout>
 
             <Label
-                Text="FASE A - GRADO"
-                VerticalOptions="Center" 
-                HorizontalOptions="Center"
-                FontSize="22"
                 FontAttributes="Bold"
-                TextColor="#083765"
-                Margin="20"
-            />
-
-            <Label
-                Text="Formulario de registro"
-                VerticalOptions="Center"
-                HorizontalOptions="Center"
-                TextColor="#333333"
-                FontSize="14"
-            />
-
-            <Label
-                Text="Complete la siguiente información para realizar su inscripción"
-                TextColor="#333333"
-                VerticalOptions="Center"
-                HorizontalOptions="Center"
-                FontSize="14"
-                />
-
-        </StackLayout>
-
-        <StackLayout Spacing="20" Padding="20">
-
-            <Label
-                Text="Datos Personales"
-                TextColor="#959595"
                 FontSize="16"
-                FontAttributes="Bold"
-                />
-            
-            <Entry
-                x:Name="txtTipoIdentificacion"
-                Placeholder="seleccione"
-                BackgroundColor="White"
-                />
-            
-            <Entry
-                x:Name="txtApellidos"
-                Placeholder="Apellidos"
-                BackgroundColor="White"
-                />
+                Text="Datos Personales"
+                TextColor="#959595" />
 
-            <Entry
-                x:Name="txtNombres"
-                Placeholder="Nombres completos"
-                BackgroundColor="White"
-                />
+            <StackLayout Padding="20" Spacing="20">
 
-            <Entry
-                x:Name="txtTelefono"
-                Placeholder="Teléfono personal"
-                BackgroundColor="White"
-                />
+                <Picker
+                    x:Name="pckTipoIdentificacion"
+                    Title="Tipo Identificación"
+                    BackgroundColor="White"
+                    FontSize="16"
+                    SelectedIndex="0"
+                    TextColor="#333333"
+                    TitleColor="#333333">
+                    <Picker.Items>
+                        <x:String>CÉDULA</x:String>
+                        <x:String>PASAPORTE</x:String>
+                    </Picker.Items>
 
-            <Entry
-                x:Name="txtCorreo"
-                Placeholder="Correo personal"
-                BackgroundColor="White"
-                />
+                </Picker>
 
-            <Entry
-                x:Name="txtCorreoConfirmacion"
-                Placeholder="Confirmar correo"
-                BackgroundColor="White"
-                />
+                <Entry
+                    x:Name="txtApellidos"
+                    BackgroundColor="White"
+                    Placeholder="Apellidos"
+                    TextColor="#333333" />
 
-            <Label Text="Carrera:" TextColor="#333333" FontSize="14" />
-            <Picker
-                x:Name="pckCarrera"
-                Title="Seleccione"
-                BackgroundColor="White"
-                TextColor="#333333"
-                TitleColor="#888888"
-                HeightRequest="45"
-                >
-                <Picker.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Ingeniería de software</x:String>
-                        <x:String>Administración</x:String>
-                        <x:String>Contabilidad</x:String>
-                    </x:Array>
-                </Picker.ItemsSource>
-                
-                
-                
-            </Picker>
+                <Entry
+                    x:Name="txtNombres"
+                    BackgroundColor="White"
+                    Placeholder="Nombres completos"
+                    TextColor="#333333" />
 
-            <Entry
-                x:Name="txtCarrera"
-                Placeholder="seleccione"
-                BackgroundColor="White"
-                />
+                <Entry
+                    x:Name="txtTelefono"
+                    BackgroundColor="White"
+                    Keyboard="Numeric"
+                    MaxLength="10"
+                    Placeholder="Teléfono personal"
+                    TextColor="#333333" />
 
-            <Entry
-                x:Name="txtModalidad"
-                Placeholder="seleccione"
-                BackgroundColor="White"
-                />
+                <Entry
+                    x:Name="txtCorreo"
+                    BackgroundColor="White"
+                    Keyboard="Email"
+                    Placeholder="Correo personal"
+                    TextColor="#333333" />
 
-            <Entry
-                x:Name="txtCampus"
-                Placeholder="Confirmar correo"
-                BackgroundColor="White"
-                />
+                <Entry
+                    x:Name="txtCorreoConfirmacion"
+                    BackgroundColor="White"
+                    Keyboard="Email"
+                    Placeholder="Confirmar correo"
+                    TextColor="#333333" />
 
-        </StackLayout>
-    </VerticalStackLayout>
+                <Picker
+                    x:Name="pckCarrera"
+                    Title="Carrera"
+                    BackgroundColor="White"
+                    FontSize="16"
+                    SelectedIndex="0"
+                    TextColor="#333333"
+                    TitleColor="#333333">
+                    <Picker.Items>
+                        <x:String>ADMINISTRACIÓN DE EMPRESAS</x:String>
+                        <x:String>CIENCIAS DE LA EDUCACIÓN BÁSICA</x:String>
+                        <x:String>CIENCIAS DE LA EDUCACIÓN INICIAL</x:String>
+                        <x:String>CONTABILIDAD Y AUDITRÍA</x:String>
+                        <x:String>DISEÑO DIGITAL</x:String>
+                        <x:String>ELECTRÓNICA Y AUTOMOTIZACIÓN</x:String>
+                        <x:String>INFORMÁTICA</x:String>
+                        <x:String>MEDICINAL</x:String>
+                        <x:String>PSICOLOGÍA</x:String>
+                        <x:String>SISTEMAS DE INFORMACIÓN</x:String>
+                        <x:String>TELECOMUNICACIONES</x:String>
+                    </Picker.Items>
+
+                </Picker>
+
+                <Picker
+                    x:Name="pckModalidad"
+                    Title="Modalidad"
+                    BackgroundColor="White"
+                    FontSize="18"
+                    SelectedIndex="0"
+                    TextColor="#333333"
+                    TitleColor="#333333">
+                    <Picker.Items>
+                        <x:String>PRESENCIAL</x:String>
+                        <x:String>SEMIPRESENCIAL</x:String>
+                        <x:String>EN LÍNEA</x:String>
+                    </Picker.Items>
+
+                </Picker>
+
+                <Picker
+                    x:Name="pckCampus"
+                    Title="Campus"
+                    BackgroundColor="White"
+                    FontSize="18"
+                    SelectedIndex="0"
+                    TextColor="#333333"
+                    TitleColor="#333333">
+                    <Picker.Items>
+                        <x:String>Campus Matriz - Francisco Pizarro E4-142 y Marieta de Veintimilla</x:String>
+                    </Picker.Items>
+
+                </Picker>
+
+                <Button
+                    x:Name="btnEnviar"
+                    Clicked="btnButton_Clicked"
+                    Text="Enviar Inscripción" />
+
+            </StackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
