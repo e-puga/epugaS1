@@ -148,6 +148,8 @@
 
                 </Picker>
 
+                <Image MaximumHeightRequest="400" Source="captura_info_uisrael.png" />
+
                 <Button
                     x:Name="btnEnviar"
                     Clicked="btnButton_Clicked"
